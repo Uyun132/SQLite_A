@@ -56,4 +56,18 @@ public class DBcontroler extends SQLiteOpenHelper {  //OpenHelper cuma ada disin
         db.close();
         return daftarTeman;
     }
+
+    public void UpdateData(HashMap<String,String>queryValues){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues nilai = new ContentValues();
+        nilai.put("nama",queryValues.get("nama"));
+        nilai.put("telepon",queryValues.get("telepon"));
+        db.update("teman",nilai,"id=?",new String[]{queryValues.get("id")});
+        db.close();
+    }
+    public void DeleteDatabase(HashMap<String,String> queryValue){
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete("teman","id=?",new String[]{queryValue.get("id")});
+        db.close();
+    }
 }
