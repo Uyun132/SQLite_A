@@ -46,8 +46,8 @@ public class TemanAdapter extends RecyclerView.Adapter<TemanAdapter.TemanViewHol
     }
 
     public class TemanViewHolder extends RecyclerView.ViewHolder {
-private CardView cardku;
-private TextView namaTxt, teleponTxt;
+        private CardView cardku;
+        private TextView namaTxt, teleponTxt;
         public TemanViewHolder(View view) {
             super(view);
             cardku = (CardView) view.findViewById(R.id.kartuku);

@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         temanArrayList = new ArrayList<>();
 
-        for(int i=0; i<daftarTeman.size();i++){
+        for(int i=0; i<daftarTeman.size(); i++){
             Teman teman = new Teman();
             teman.setId(daftarTeman.get(i).get("id").toString());
             teman.setNama(daftarTeman.get(i).get("nama").toString());
